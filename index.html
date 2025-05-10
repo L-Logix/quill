@@ -8,17 +8,9 @@
 <body>
 
   <section>
-    <!-- 100 span blocks for animated grid -->
-    <!-- You can copy/paste more or fewer for performance -->
-    <!-- These are used for the background animation -->
-    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <!-- 100 animated spans -->
+    <!-- You can paste more for effect -->
+    <!-- Just showing a few for simplicity -->
     <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
     <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
 
@@ -35,7 +27,7 @@
             <i>Password</i>
           </div>
           <div class="inputBox">
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" onclick="checkLogin()">
           </div>
         </div>
       </div>
@@ -43,10 +35,18 @@
   </section>
 
   <script>
-    document.querySelector('input[type="submit"]').addEventListener('click', function (e) {
-      e.preventDefault();
-
+    function checkLogin() {
       const username = document.querySelector('input[name="username"]').value.trim();
       const password = document.querySelector('input[name="password"]').value.trim();
 
-      if (username === 'vanta' && password === 'ELLIS') {
+      if (username === "vanta" && password === "ELLIS") {
+        // Open in new tab
+        window.open("https://smallwood.com", "_blank");
+      } else {
+        alert("Incorrect username or password.");
+      }
+    }
+  </script>
+
+</body>
+</html>
